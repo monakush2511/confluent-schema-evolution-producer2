@@ -1,0 +1,28 @@
+{
+  "namespace" : "com.example",
+  "type" : "record",
+  "name" : "Sensor",
+  "fields" : [
+    {"name":"id","type":"string"},
+    {"name":"velocity","type":"float","default":0.0},
+    {"name":"externalTemperature", "type":"float", "default":0.0},
+    {"name":"accelerometer","type":[
+      "null",{
+        "type":"array",
+        "items":"float"
+      }
+    ],
+    "default":null
+    },
+    {"name":"magneticField","type":[
+      "null",{
+        "type":"array",
+        "items":"float"
+      }
+    ],
+     "default":null
+    }
+    
+  ]
+
+}

@@ -1,0 +1,15 @@
+topic:
+  name: sensor_topic
+  partitions-num: 6
+  replication-factor: 3
+spring:
+  cloud:
+    stream:
+      bindings:
+        supplier-out-0:
+          contentType: application/*+avro
+          destination: sensor_topic
+      schemaRegistryClient:
+        endpoint: https://psrc-lgy7n.europe-west3.gcp.confluent.cloud
+     
+server.port: 9010
